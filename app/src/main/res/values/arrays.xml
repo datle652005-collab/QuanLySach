@@ -1,0 +1,14 @@
+<resources>
+    <string-array name="book_categories">
+        <item>Thể loại</item>
+        <item>Văn học</item>
+        <item>Kinh tế</item>
+        <item>Tâm lý</item>
+        <item>Kỹ năng sống</item>
+        <item>Thiếu nhi</item>
+        <item>Truyện tranh</item>
+
+        <item>Kinh di</item>
+        <item>Khác</item>
+    </string-array>
+</resources>

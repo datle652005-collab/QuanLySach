@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_header_gradient"
+        android:elevation="2dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:src="@drawable/ic_back_white"
+            app:tint="#E8EBF0" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Sửa hồ sơ"
+            android:textColor="#F0F0F0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:text="Lưu"
+            android:textColor="#F4F3F3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackground" />
+    </RelativeLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="24dp">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgEditAvatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@mipmap/ic_launcher_round"
+                        app:shapeAppearanceOverlay="@style/CircleImage"
+                        app:strokeColor="#F1F1F1"
+                        app:strokeWidth="1dp" />
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignBottom="@id/imgEditAvatar"
+                        android:layout_alignEnd="@id/imgEditAvatar"
+                        android:background="@drawable/shape_circle_white"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_camera"
+                        app:tint="#555555" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="10dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#FFFFFF" android:orientation="vertical">
+
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Tên" />
+                    <EditText android:id="@+id/edtFullName" style="@style/EditInputStyle" android:hint="Thiết lập ngay" />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Tên đăng nhập" />
+                    <TextView android:id="@+id/tvUsernameFixed" style="@style/EditInputStyle" android:text="thuhue12" android:textColor="#999999" />
+                    <Space android:layout_width="12dp" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Tiểu sử" />
+                    <EditText android:id="@+id/edtBio" style="@style/EditInputStyle" android:hint="Thiết lập ngay" android:maxLength="100" />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="10dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#FFFFFF" android:orientation="vertical">
+
+                <LinearLayout android:id="@+id/btnSelectGender" style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Giới tính" />
+                    <TextView android:id="@+id/tvGender" style="@style/EditInputStyle" android:text="Thiết lập ngay" />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+
+                <LinearLayout android:id="@+id/btnSelectDOB" style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Ngày sinh" />
+                    <TextView android:id="@+id/tvDOB" style="@style/EditInputStyle" android:text="01/01/2000" />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="10dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#FFFFFF" android:orientation="vertical">
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Điện thoại" />
+                    <EditText android:id="@+id/edtPhone" style="@style/EditInputStyle" android:hint="Thiết lập ngay" android:inputType="phone" />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Email" />
+                    <TextView android:id="@+id/tvEmailFixed" style="@style/EditInputStyle" android:text="caothuhue@gmail.com" android:textColor="#999999" />
+                    <Space android:layout_width="12dp" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

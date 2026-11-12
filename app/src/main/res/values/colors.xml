@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="shopee_orange">#EE4D2D</color>
+    <color name="orange_shopee">#EE4D2D</color>
+    <color name="gray">#757575</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="teal_700">#018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="blue_primary">#1D4ED8</color>
+
+    <color name="pink_primary">#D97A91</color>
+</resources>

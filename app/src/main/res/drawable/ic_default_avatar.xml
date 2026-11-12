@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/ic_default_avatar.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <!-- Nền tròn xám -->
+    <path
+        android:fillColor="#FFCCCCCC"
+        android:pathData="M22,0 C9.85,0 0,9.85 0,22 C0,34.15 9.85,44 22,44
+                          C34.15,44 44,34.15 44,22 C44,9.85 34.15,0 22,0 Z" />
+    <!-- Đầu -->
+    <path
+        android:fillColor="#FF888888"
+        android:pathData="M22,10 C18.13,10 15,13.13 15,17 C15,20.87 18.13,24 22,24
+                          C25.87,24 29,20.87 29,17 C29,13.13 25.87,10 22,10 Z" />
+    <!-- Thân -->
+    <path
+        android:fillColor="#FF888888"
+        android:pathData="M8,38 C8,31.37 14.27,26 22,26 C29.73,26 36,31.37 36,38 Z" />
+</vector>

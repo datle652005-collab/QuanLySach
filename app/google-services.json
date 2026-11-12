@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "785467540135",
+    "project_id": "quanlysach-cd026",
+    "storage_bucket": "quanlysach-cd026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785467540135:android:458eddcb3e05c86d411182",
+        "android_client_info": {
+          "package_name": "com.example.quanlysach"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBTqcnDnaP2TJTbgq0ETJ5cUzmaytsw5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

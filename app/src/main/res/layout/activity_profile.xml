@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F7">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <View
+                android:id="@+id/headerBg"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="@drawable/bg_header_gradient"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btnSettingsGear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_setting"
+                    app:tint="#FFFFFF" />
+
+                <FrameLayout
+                    android:id="@+id/btnCartProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_shopping_cart"
+                        app:tint="#FFFFFF" />
+                    <TextView
+                        android:id="@+id/tvCartBadgeProfile"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/bg_badge_red"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:text="3" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:padding="2dp"
+                android:src="@mipmap/ic_launcher_round"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintTop_toTopOf="@id/imgAvatar"
+                app:layout_constraintStart_toEndOf="@id/imgAvatar"
+                android:layout_marginTop="6dp"
+                tools:text="Huệ Duyên" />
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#FADDE5"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:text="duyen@gmail.com" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="-25dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:strokeWidth="0dp"
+                app:layout_constraintTop_toBottomOf="@id/headerBg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Đơn hàng của tôi"
+                            android:textColor="#5D4D53"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvViewOrderHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="Lịch sử mua >"
+                            android:textColor="#D65B82"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+                        <LinearLayout android:id="@+id/layoutOrderPending" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:foreground="?attr/selectableItemBackground">
+                            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_close" app:tint="#D65B82"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chờ xác nhận" android:textSize="11sp" android:textColor="#5D4D53" android:layout_marginTop="6dp" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/layoutOrderAccepted" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:foreground="?attr/selectableItemBackground">
+                            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_waiting_shipment" app:tint="#D65B82"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chờ lấy hàng" android:textSize="11sp" android:textColor="#5D4D53" android:layout_marginTop="6dp" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/layoutOrderShipping" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:foreground="?attr/selectableItemBackground">
+                            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_shipping_truck" app:tint="#D65B82"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đang giao" android:textSize="11sp" android:textColor="#5D4D53" android:layout_marginTop="6dp" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/layoutOrderDone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:foreground="?attr/selectableItemBackground">
+                            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_usage" app:tint="#D65B82"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thành công" android:textSize="11sp" android:textColor="#5D4D53" android:layout_marginTop="6dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvHeaderAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp"
+                android:text="Tài khoản của tôi"
+                android:textColor="#5D4D53"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/cardOrders" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAccountSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:strokeWidth="0dp"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderAccount">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <LinearLayout android:id="@+id/btnProfileInfo" style="@style/SettingsRowStyle">
+                        <ImageView style="@style/SettingsIconStyle" android:src="@android:drawable/ic_menu_edit" app:tint="#D65B82"/>
+                        <TextView style="@style/SettingsTextStyle" android:text="Hồ sơ &amp; Bảo mật" />
+                        <ImageView style="@style/SettingsArrowStyle" android:src="@drawable/ic_arrow_right" app:tint="#94A3B8"/>
+                    </LinearLayout>
+
+                    <View style="@style/SettingsDividerStyle" android:layout_marginHorizontal="12dp"/>
+
+                    <LinearLayout android:id="@+id/btnAddress" style="@style/SettingsRowStyle">
+                        <ImageView style="@style/SettingsIconStyle" android:src="@android:drawable/ic_dialog_map" app:tint="#D65B82"/>
+                        <TextView style="@style/SettingsTextStyle" android:text="Địa chỉ nhận sách" />
+                        <ImageView style="@style/SettingsArrowStyle" android:src="@drawable/ic_arrow_right" app:tint="#94A3B8"/>
+                    </LinearLayout>
+
+                    <View style="@style/SettingsDividerStyle" android:layout_marginHorizontal="12dp"/>
+
+                    <LinearLayout android:id="@+id/btnHelpCenter" style="@style/SettingsRowStyle">
+                        <ImageView style="@style/SettingsIconStyle" android:src="@android:drawable/ic_menu_help" app:tint="#D65B82"/>
+                        <TextView style="@style/SettingsTextStyle" android:text="Trung tâm hỗ trợ (FAQ)" />
+                        <ImageView style="@style/SettingsArrowStyle" android:src="@drawable/ic_arrow_right" app:tint="#94A3B8"/>
+                    </LinearLayout>
+
+                    <View style="@style/SettingsDividerStyle" android:layout_marginHorizontal="12dp"/>
+
+                    <LinearLayout android:id="@+id/btnPolicy" style="@style/SettingsRowStyle">
+                        <ImageView style="@style/SettingsIconStyle" android:src="@android:drawable/ic_menu_info_details" app:tint="#D65B82"/>
+                        <TextView style="@style/SettingsTextStyle" android:text="Chính sách nhà sách" />
+                        <ImageView style="@style/SettingsArrowStyle" android:src="@drawable/ic_arrow_right" app:tint="#94A3B8"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:elevation="12dp"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

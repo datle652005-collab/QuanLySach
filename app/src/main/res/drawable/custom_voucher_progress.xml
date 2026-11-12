@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lớp nền (Background) của thanh progress -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="#EEEEEE" /> <!-- Màu xám nhạt cho phần chưa hoàn thành -->
+        </shape>
+    </item>
+
+    <!-- Lớp tiến độ (Progress) - phần màu cam -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="10dp" />
+                <solid android:color="#FF5722" /> <!-- Màu cam đậm theo thiết kế -->
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

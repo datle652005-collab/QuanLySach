@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1. LỚP NỀN CỦA THANH PROGRESS (MÀU XÁM NHẠT) -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="#EDF2F7" /> <!-- Màu nền xám nhạt -->
+        </shape>
+    </item>
+
+    <!-- 2. LỚP TIẾN ĐỘ (MÀU XANH DƯƠNG) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="10dp" />
+                <solid android:color="#2196F3" /> <!-- Màu xanh chủ đạo -->
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

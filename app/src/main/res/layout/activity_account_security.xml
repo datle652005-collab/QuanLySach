@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_header_gradient"
+        android:elevation="2dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_back_white"
+            app:tint="#F0E9E9" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tài khoản &amp; Bảo mật"
+            android:textColor="#F6EFEF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Tài Khoản"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#FFFFFF" android:orientation="vertical">
+
+                <LinearLayout android:id="@+id/btnMyProfile" style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:layout_width="0dp" android:layout_weight="1" android:text="Hồ sơ của tôi" />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Tên người dùng" />
+                    <TextView android:id="@+id/tvUsernameFixed" style="@style/EditInputStyle" android:text="..." android:textColor="#555555" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:text="Điện thoại" />
+                    <TextView android:id="@+id/tvMaskedPhone" style="@style/EditInputStyle" android:text="..." />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+
+                <LinearLayout style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:layout_width="wrap_content" android:text="Email nhận hóa đơn" />
+                    <TextView android:id="@+id/tvMaskedEmail" style="@style/EditInputStyle" android:text="..." />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+                <View style="@style/SettingsDividerStyle" />
+
+                <LinearLayout android:id="@+id/btnChangePassword" style="@style/EditRowStyle">
+                    <TextView style="@style/EditLabelStyle" android:layout_width="0dp" android:layout_weight="1" android:text="Đổi mật khẩu" />
+                    <ImageView style="@style/EditArrowStyle" android:src="@android:drawable/ic_media_play" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

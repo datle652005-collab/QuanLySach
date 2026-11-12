@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/ic_more_horizontal.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Chấm trái -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M5,12 C5,13.1 4.1,14 3,14 C1.9,14 1,13.1 1,12
+                          C1,10.9 1.9,10 3,10 C4.1,10 5,10.9 5,12 Z" />
+    <!-- Chấm giữa -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,12 C14,13.1 13.1,14 12,14 C10.9,14 10,13.1 10,12
+                          C10,10.9 10.9,10 12,10 C13.1,10 14,10.9 14,12 Z" />
+    <!-- Chấm phải -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M23,12 C23,13.1 22.1,14 21,14 C19.9,14 19,13.1 19,12
+                          C19,10.9 19.9,10 21,10 C22.1,10 23,10.9 23,12 Z" />
+</vector>
